@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.besong_anongernest.throwdice.MainActivity" >
+
+    <TextView
+        android:id="@+id/select_player_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Select Your Player"
+        android:textColor="#616161"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20sp"/>
+
+  <RelativeLayout
+      android:id="@+id/options_players_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_below="@id/select_player_tv"
+      android:layout_marginTop="8dp">
+
+          <Button
+              android:id="@+id/player1_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="16dp"
+              android:layout_marginTop="32dp"
+              android:text="Player 1"
+              android:onClick="playerOneSelected"
+              android:textColor="#000000"
+              android:background="@color/colorPrimary"
+              android:textStyle="bold"/>
+
+          <Button
+              android:id="@+id/player2_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="16dp"
+              android:layout_marginTop="32dp"
+              android:text="Player 2"
+              android:onClick="playerTwoSelected"
+              android:textColor="#000000"
+              android:background="@color/colorPrimary"
+              android:textStyle="bold"/>
+
+  </RelativeLayout>
+    
+        
+        <TextView
+            android:id="@+id/selected_player_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Player Selected"
+            android:layout_below="@id/select_player_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="109dp"
+            android:textColor="#616161"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/score_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selected_player_tv"
+            android:layout_marginTop="48dp"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="56sp"/>
+    
+    <LinearLayout
+        android:id="@+id/dice_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/score_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:paddingTop="32dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:onClick="incrementByOne"
+                android:textColor="#000000"
+                android:background="@color/colorPrimary"    />
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="4"
+               android:layout_marginTop="8dp"
+               android:onClick="incrementByFour"
+               android:textColor="#000000"
+               android:background="@color/colorPrimary"    />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="32dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2"
+                android:onClick="incrementByTwo"
+                android:textColor="#000000"
+                android:background="@color/colorPrimary"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_marginTop="8dp"
+                android:onClick="incrementByFive"
+                android:textColor="#000000"
+                android:background="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:paddingRight="8dp"
+            android:paddingTop="32dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="3"
+                android:onClick="incrementByThree"
+                android:textColor="#000000"
+                android:background="@color/colorPrimary"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:layout_marginTop="8dp"
+                android:onClick="incrementBySix"
+                android:textColor="#000000"
+                android:background="@color/colorPrimary"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dice_buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Reset"
+        android:onClick="ResetScore"
+        android:textColor="#000000"
+        android:background="@color/colorPrimary"/>
+
+</RelativeLayout>
